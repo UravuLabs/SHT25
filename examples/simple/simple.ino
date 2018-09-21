@@ -12,12 +12,12 @@ void setup(void){
 }
 
 void loop(void){
-  Serial.print("Humidity : ");
+  Serial.print("Humidity    : ");
   Serial.print(H_Sens.getHumidity());
   Serial.println(" %RH");
   Serial.print("Temperature : ");
   Serial.print(H_Sens.getTemperature());
-  Serial.print(" C");
+  Serial.println(" C");
 
   delay(1000);
 }
