@@ -71,7 +71,8 @@ char SHT25::readByte(char CMD, byte &value){
     while (!Wire.available()) {
       value = Wire.read();
     }
-  }
+    return 1;
+  }else{return 0;}
 }
 
 char SHT25::writeByte(char CMD, byte regDat){
@@ -85,7 +86,7 @@ char SHT25::writeByte(char CMD, byte regDat){
 }
 
 char SHT25::setResCombination(byte combination){
-  byte cmd, value;
+  byte regDat, value;
   switch (combination) {
     case 1:                 //RH-12bit, T-14bit
       this->T_Delay   = 85;
