@@ -7,8 +7,6 @@
 
 #include <Arduino.h>
 
-#define
-
 //Commands
 #define T_NO_HOLD     0xF3 //trigger T measurement with no hold master
 #define RH_NO_HOLD    0xF5 //trigger RH measurement with no hold master
@@ -33,7 +31,7 @@ class SHT25{
     const float RH_ERROR = 101.0,T_ERROR = 126.0;
 
   private:
-    const byte SHT25_ADDR = 0x40 //Sensor addresses
+    const byte SHT25_ADDR = 0x40; //Sensor addresses
     byte T_Delay = 85;  //for 14 bit resolution
     byte RH_Delay = 29; //for 12 bit resolution
     float TEMP, RH, S_T, S_RH;
