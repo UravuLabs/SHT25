@@ -1,4 +1,5 @@
-/*File   : SHT25.h
+/*
+  File   : SHT25.h
   Author : Amit Ate
   Email  : amit@uravulabs.com
   Company: Uravu Labs
