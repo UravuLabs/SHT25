@@ -55,9 +55,8 @@ char SHT25::readBytes(char CMD, float &value, char length, char param){
     while (!Wire.available());
     for(char x=0; x<length; x++){
       data[x] = Wire.read();
-      x++;
     }
-    value = (float)((unsigned int)data[0]*((int)1<<8) + (unsigned int)(data[1]&((int)1<<2)));
+    value = (float)(data[0]<<8) + (( data[1] & 0xFC));
     return 1;
   }else{return 0;}
 }
